@@ -371,6 +371,26 @@ $("#send-mail").click(function () {
             });
         }
     });
+
+    //Animate roadmap bars
+    jQuery('.roadmap > li > span').one('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery(this).each(function () {
+                jQuery(this).animate({
+                    width: jQuery(this).attr('data-width')
+                }, 3000);
+            });
+        }
+    });
+    jQuery('.roadmap-thumbnail > li > span').one('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery(this).each(function () {
+                jQuery(this).animate({
+                    width: jQuery(this).attr('data-width')
+                }, 3000);
+            });
+        }
+    });
 });
 
 //Initialize google map for contact setion with your location.
