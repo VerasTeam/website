@@ -382,7 +382,17 @@ $("#send-mail").click(function () {
             });
         }
     });
-    jQuery('.roadmap-thumbnail > li > span').one('inview', function (event, visible) {
+    jQuery('.roadmap-two > li > span').one('inview', function (event, visible) {
+        if (visible == true) {
+            jQuery(this).each(function () {
+                jQuery(this).animate({
+                    width: jQuery(this).attr('data-width')
+                }, 3000);
+            });
+        }
+    });
+
+    jQuery('.roadmap-three > li > span').one('inview', function (event, visible) {
         if (visible == true) {
             jQuery(this).each(function () {
                 jQuery(this).animate({
